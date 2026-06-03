@@ -1,0 +1,11 @@
+Admin dashboard UI updated:
+- Website Header/Footer are now hidden automatically on /admin routes.
+- Admin panel now uses only the sidebar layout.
+- Old admin topbar removed from AdminShell.
+- Logout redirects admin back to the main website (/).
+- Sidebar redesigned with active states, mobile drawer, and polished dark UI.
+- Dashboard, cards, CRUD lists, forms, settings, and login page were redesigned.
+
+Important:
+Run npm install before build if node_modules is not included.
+Build may require internet once for Prisma binaries if they are not already cached.

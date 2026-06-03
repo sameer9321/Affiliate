@@ -1,0 +1,31 @@
+FINAL UPDATE NOTES
+
+1) Vercel image upload fixed
+- Local /public/uploads storage is not used in production.
+- Admin image uploads now go to Cloudinary.
+- Add these environment variables in Vercel Project Settings > Environment Variables:
+  CLOUDINARY_CLOUD_NAME
+  CLOUDINARY_API_KEY
+  CLOUDINARY_API_SECRET
+
+2) Custom sorting added
+- Admin list pages now have Up and Down buttons.
+- You can manually set display order for:
+  Stores
+  Coupons
+  Categories
+  Blogs
+- Frontend website uses this custom order first.
+
+3) Database update required
+Because sortOrder was added to Prisma schema, run:
+  npx prisma db push
+
+4) Deploy commands
+  npm install
+  npx prisma generate
+  npx prisma db push
+  npm run build
+
+5) Important
+After uploading this ZIP to Vercel, redeploy after adding Cloudinary env variables.

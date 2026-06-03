@@ -1,0 +1,26 @@
+Reorder Coupons Update
+
+Changes included:
+- Coupons admin page now shows Add New Coupon and Reorder Coupons buttons.
+- Coupon row Sorting dropdown was removed from coupons list.
+- Reorder Coupons opens a modal matching the requested flow.
+- Modal first asks admin to select a store.
+- After selecting a store, admin can reorder only that store's coupons by position.
+- Save Reorder updates coupon sortOrder in the database.
+- Coupon list includes an All Stores filter.
+- Existing store/category/blog sorting remains available through their sorting dropdowns.
+
+After uploading/deploying:
+1. npm install
+2. npx prisma generate
+3. npx prisma db push
+4. npm run build
+
+Vercel env variables still required:
+DATABASE_URL
+AUTH_SECRET
+ADMIN_EMAIL
+ADMIN_PASSWORD
+CLOUDINARY_CLOUD_NAME
+CLOUDINARY_API_KEY
+CLOUDINARY_API_SECRET

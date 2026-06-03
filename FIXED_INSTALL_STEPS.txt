@@ -1,0 +1,23 @@
+Saving Trendz install steps:
+
+1. Create .env.local in project root.
+2. Add these values:
+   DATABASE_URL="your_neon_database_url"
+   AUTH_SECRET="your_generated_auth_secret"
+   ADMIN_EMAIL="admin@savingtrendz.com"
+   ADMIN_PASSWORD="your_admin_password"
+
+3. Install:
+   npm install
+
+4. Push database tables to Neon:
+   npm run db:push
+
+5. Seed demo data:
+   npm run db:seed
+
+6. Run locally:
+   npm run dev
+
+7. Build check:
+   npm run build

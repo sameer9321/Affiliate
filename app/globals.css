@@ -1,0 +1,14 @@
+@import "tailwindcss";
+
+:root {
+  --cream: #fff7ed;
+  --teal: #0f766e;
+  --orange: #f97316;
+  --navy: #0f172a;
+}
+
+* { box-sizing: border-box; scroll-behavior: smooth; }
+body { margin: 0; background: var(--cream); color: var(--navy); }
+a { text-decoration: none; }
+button, input, textarea, select { font: inherit; }
+::selection { background: var(--orange); color: #fff; }

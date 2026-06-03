@@ -1,0 +1,25 @@
+Saving Trendz final update notes
+
+Completed changes:
+1. Footer updated: Affiliate Disclosure removed and replaced with Terms & Conditions.
+2. Added /terms-and-conditions page.
+3. Added /privacy-policy page because footer Privacy Policy is now clickable.
+4. Admin add/edit forms updated for the fields shown in your screenshots:
+   - Category: Category Name, Category Image upload, slug, deal count, description.
+   - Store: Store Name, Store Description, Store URL, Store Logo upload, Category dropdown, slug, logo text, rating, coupon count, featured.
+   - Coupon: Coupon Title, Coupon Description, Store URL, Coupon Code, Store dropdown, discount, expiry, type, verified, featured.
+   - Blog: Title, Category dropdown, Content area, Blog Image upload, slug, excerpt, date, read time.
+5. Backend APIs now accept file uploads using FormData.
+6. Uploaded images save inside public/uploads/categories, public/uploads/stores and public/uploads/blogs.
+7. Prisma schema updated with image/logo fields and coupon description/store URL fields.
+8. Frontend cards/pages updated to display uploaded category images, store logos and blog images.
+
+Important after upload/deployment:
+1. Run npm install
+2. Run npx prisma generate
+3. Run npx prisma db push
+4. Run npm run build
+5. Run npm start
+
+Note:
+This zip does not include node_modules or .next folder. This avoids the Windows Prisma DLL permission issue and keeps the folder clean. Install dependencies fresh on your machine/server.

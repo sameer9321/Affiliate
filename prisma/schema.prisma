@@ -1,0 +1,72 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Category {
+  id          String   @id @default(cuid())
+  name        String   @unique
+  slug        String   @unique
+  icon        String   @default("🏷️")
+  imageUrl    String   @default("")
+  description String   @default("")
+  deals       Int      @default(0)
+  sortOrder   Int      @default(0)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model Store {
+  id          String   @id @default(cuid())
+  name        String
+  slug        String   @unique
+  description String
+  category    String
+  website     String
+  logoText    String   @default("")
+  logoUrl     String   @default("")
+  rating      Float    @default(4.5)
+  couponCount Int      @default(0)
+  featured    Boolean  @default(false)
+  sortOrder   Int      @default(0)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model Coupon {
+  id          String   @id @default(cuid())
+  title       String
+  description String   @default("")
+  store       String
+  storeUrl    String   @default("")
+  category    String   @default("")
+  code        String
+  type        String   @default("Code")
+  discount    String   @default("")
+  expiry      String   @default("Limited Time")
+  verified    Boolean  @default(true)
+  featured    Boolean  @default(false)
+  clicks      Int      @default(0)
+  sortOrder   Int      @default(0)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model Blog {
+  id        String   @id @default(cuid())
+  title     String
+  slug      String   @unique
+  excerpt   String   @default("")
+  content   String   @db.Text
+  date      String
+  category  String
+  readTime  String   @default("4 min read")
+  imageUrl  String   @default("")
+  sortOrder Int      @default(0)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}

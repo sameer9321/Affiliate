@@ -1,0 +1,7 @@
+Final update included:
+- Admin list sorting changed from Up/Down buttons to a Sorting dropdown.
+- Sorting dropdown works for coupons, stores, categories and blogs.
+- Reorder API now supports direct target position sorting.
+- Blog page Read More opens a same-screen popup modal.
+- Blog popup shows blog image, title, category, read time/date and full content.
+- Home page blog cards now show blog images and use the same Read More popup.
